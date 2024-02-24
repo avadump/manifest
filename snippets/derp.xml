@@ -19,8 +19,8 @@
            fetch="https://github.com/DerpFest-Devices"
            revision="13" />
 
-  <remote  name="alex"
-           fetch="ssh://git@github.com/NurKeinNeid"
+  <remote  name="avadump"
+           fetch="ssh://git@github.com/avadump"
            revision="13" />
 
   <!-- DerpFest -->
@@ -67,8 +67,8 @@
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="derp" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="avadump" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="avadump" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="derp" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="derp" />
@@ -122,7 +122,7 @@
 
   <!-- Packages -->
   <project path="packages/apps/DerpLauncher" name="packages_apps_DerpLauncher" groups="pdk-fs" remote="derp" />
-  <project path="packages/apps/DerpSpace" name="packages_apps_DerpSpace" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/DerpSpace" name="packages_apps_DerpSpace" groups="pdk-fs" remote="avadump" />
   <project path="packages/apps/DerpWalls" name="packages_apps_DerpWalls" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/Flash" name="packages_apps_Flash" groups="pdk-fs" remote="derp" />
@@ -136,7 +136,7 @@
   <project path="packages/apps/Prospect" name="packages_apps_Prospect" remote="derp" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github" revision="main" />
   <project path="packages/apps/Ripple" name="packages_apps_Ripple" groups="pdk-fs" remote="derp" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="avadump" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="derp" />
@@ -150,6 +150,7 @@
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" groups="pdk-fs" remote="derp" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" groups="pdk-cw-fs,pdk-fs" remote="avadump" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="derp" />
 
@@ -164,7 +165,7 @@
   <project path="system/memory/lmkd" name="system_memory_lmkd" groups="pdk" remote="derp" />
   <project path="system/netd" name="system_netd" groups="pdk" remote="derp" />
   <project path="system/security" name="system_security" groups="pdk" remote="derp" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="derp" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="avadump" />
   <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" groups="pdk" remote="derp" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="derp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="derp" />
@@ -174,13 +175,13 @@
 
   <!-- Vendor -->
   <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" groups="qcom,qssi" remote="derp" />
-  <project path="vendor/derp" name="vendor_derp" remote="derp">
+  <project path="vendor/derp" name="vendor_derp" remote="avadump">
     <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
   </project>
   <project path="vendor/fontage" name="vendor_fontage" remote="derp" />
   <project path="vendor/gms" name="DerpFest/13_vendor_gms" remote="gitlab" revision="13" clone-depth="1" />
   <project path="vendor/google/interfaces" name="vendor_google_interfaces" remote="derp" />
-  <project path="vendor/overlay" name="vendor_overlay" remote="derp" />
+  <project path="vendor/overlay" name="vendor_overlay" remote="avadump" />
   <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="derp" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal" name="vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="derp" />
   <!-- project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_commonsys-intf_bluetooth" groups="qcom,pdk-qcom" remote="derp" / -->
@@ -200,6 +201,6 @@
   <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" groups="qcom,waipio-vendor" remote="derp" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,waipio-vendor" remote="derp" />
   <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" groups="qcom,waipio-video" remote="derp" />
-  <project path="vendor/support" name="vendor_support" remote="derp" />
+  <project path="vendor/support" name="vendor_support" remote="avadump" />
 
 </manifest>
